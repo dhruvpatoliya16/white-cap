@@ -1,0 +1,9 @@
+[build]
+  base    = "whitecap-frontend"
+  command = "npm run build"
+  publish = "whitecap-frontend/dist"
+
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200
