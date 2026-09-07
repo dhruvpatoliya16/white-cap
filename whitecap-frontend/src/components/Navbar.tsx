@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import Logo from './Logo';
 
 const navLinks = [
@@ -59,13 +59,6 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
-            {/* <a
-              href="tel:+919825841566"
-              className="flex items-center gap-1.5 text-sm text-neutral-500 hover:text-brand-700 transition-colors"
-            >
-              <Phone size={14} /> */}
-              {/* <span className="font-medium">+91 98258 41566</span> */}
-            {/* </a> */}
             <Link to="/contact" className="btn-primary py-2 px-5 text-sm">
               Get a Quote
             </Link>
