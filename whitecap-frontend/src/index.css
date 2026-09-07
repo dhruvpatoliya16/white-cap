@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-sans text-neutral-800 bg-white;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold leading-tight;
+  }
+}
+
+@layer components {
+  /* ── Buttons ─────────────────────────────────────────── */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-brand-500 text-white px-6 py-3 rounded-md font-semibold text-sm tracking-wide transition-all duration-200 hover:bg-brand-700 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-brand-400 focus:ring-offset-2 active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 bg-white text-brand-600 border border-brand-500 px-6 py-3 rounded-md font-semibold text-sm tracking-wide transition-all duration-200 hover:bg-brand-50 hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-400 focus:ring-offset-2 active:scale-[0.98];
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 text-brand-600 px-4 py-2 rounded-md font-medium text-sm transition-all duration-200 hover:bg-brand-50 focus:outline-none focus:ring-2 focus:ring-brand-300;
+  }
+
+  /* ── Cards ───────────────────────────────────────────── */
+  .card {
+    @apply bg-white border border-neutral-200 rounded-xl shadow-card p-6 transition-all duration-200;
+  }
+
+  .card-hover {
+    @apply hover:shadow-card-hover hover:border-brand-200 hover:-translate-y-0.5;
+  }
+
+  /* ── Layout ──────────────────────────────────────────── */
+  .section-py {
+    @apply py-20 md:py-24;
+  }
+
+  .container-xl {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* ── Badges ──────────────────────────────────────────── */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold;
+  }
+
+  /* API badge — logo brand blue tint */
+  .badge-api {
+    @apply badge bg-brand-100 text-brand-700;
+  }
+
+  /* Excipient badge — slightly deeper blue shade */
+  .badge-excipient {
+    @apply badge bg-brand-50 text-brand-600 border border-brand-200;
+  }
+
+  /* Intermediate badge — grey (from logo grey palette) */
+  .badge-intermediate {
+    @apply badge bg-grey-100 text-grey-700;
+  }
+
+  /* ── Form ────────────────────────────────────────────── */
+  .input-field {
+    @apply block w-full rounded-md border border-neutral-300 bg-white px-4 py-3 text-sm text-neutral-800 placeholder-neutral-400 transition-colors focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-neutral-700 mb-1.5;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.5s ease forwards;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+}
