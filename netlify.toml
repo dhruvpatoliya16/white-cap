@@ -1,7 +1,7 @@
 [build]
   base    = "whitecap-frontend"
   command = "npm run build"
-  publish = "whitecap-frontend/dist"
+  publish = "dist"
 
 [[redirects]]
   from   = "/*"
